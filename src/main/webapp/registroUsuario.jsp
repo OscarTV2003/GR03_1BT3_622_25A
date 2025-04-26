@@ -8,7 +8,7 @@
 <body>
 <div class="form-container">
     <h2>Registro de Usuario</h2>
-    <form action="AplicacionWeb" method="post" accept-charset="UTF-8">
+    <form action="RegistroMiembroBarrial" method="post" accept-charset="UTF-8">
         <input type="hidden" name="action" value="registrarUsuario">
 
         <div class="form-group">

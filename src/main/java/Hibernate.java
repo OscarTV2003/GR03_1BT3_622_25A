@@ -4,9 +4,9 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 public class Hibernate {
-    public static void guardarEnBaseDeDatos(Barrio barrio) {
+    public static <T> void guardarEnBaseDeDatos(T entidad) {
         Configuration configuration = new Configuration();
-        configuration.addAnnotatedClass(Barrio.class);
+        configuration.addAnnotatedClass(entidad.getClass());
         configuration.configure("hibernate.cfg.xml");
 
         SessionFactory sessionFactory = configuration.buildSessionFactory();
@@ -14,7 +14,7 @@ public class Hibernate {
 
         Transaction transaction = session.beginTransaction();
         // Se guarda en la BD
-        session.persist(barrio);
+        session.persist(entidad);
 
         transaction.commit();
 
