@@ -1,29 +1,56 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Iniciar Sesión</title>
-    <link href="css/login.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet" >
+
+    <title>MiBarrioApp-Login</title>
 </head>
+
 <body>
-<div class="form-container">
-    <h2>Iniciar Sesión</h2>
-    <form action="AplicacionWeb" method="post" accept-charset="UTF-8">
-        <input type="hidden" name="action" value="iniciarSesion">
+<div class="login">
+    <img src="images/login.jpg" alt="image" class="login-img" >
 
-        <div class="form-group">
-            <label for="cedula">Cédula:</label>
-            <input type="text" id="cedula" name="cedula" required>
+    <form action="" class="login-form">
+        <div class="encabezado-login">
+            <img class="icon-container" src="images/iconBarrio.png">
+            <h1 class="login-title">Inicio Sesión</h1>
+        </div>
+        <div class="login-inputs">
+            <div class="login-box">
+                <input type="email" class="login-input" placeholder="Cédula" required>
+                <i class="ri-mail-fill"></i>
+            </div>
+
+            <div class="login-box">
+                <input type="password" placeholder="Contraseña" required class="login-input">
+                <i class="ri-lock-2-fill"></i>
+            </div>
         </div>
 
-        <div class="form-group">
-            <label for="contrasena">Contraseña:</label>
-            <input type="password" id="contrasena" name="contrasena" required>
+        <div class="login-check">
+            <div class="login-heck-box">
+                <input type="checkbox" class="login-check-input" id="user-check">
+                <label for="user-check" class="login-check-label">Recordar usuario</label>
+            </div>
+
+            <a href="#" class="login-forgot">Contraseña olvidada?</a>
         </div>
 
-        <button type="submit" class="submit-button">Iniciar Sesión</button>
+        <button type="submit" class="login-button">Iniciar</button>
+
+        <div class="login-register">
+            No tienes una cuenta? <a href="registroUsuario.jsp">Registrar</a>
+        </div>
+
+        <div class="login-inicio">
+            <a href="index.jsp">Volver Inicio</a>
+        </div>
     </form>
-    <a href="index.jsp" class="back-link">Volver al inicio</a>
 </div>
 </body>
 </html>
