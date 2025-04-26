@@ -1,29 +1,28 @@
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table (name = "Barrio")
 public class Barrio {
     @Id
+    @Column (name = "codigo")
     private int codBarrio;
-    private String nombre;
-
-    public Barrio(String nombre, int codBarrio) {
-        this.nombre = nombre;
-        this.codBarrio = codBarrio;
-    }
+    @Basic
+    @Column (name = "barrio")
+    private String barrio;
+    @Basic
+    @Column (name = "parroquia")
+    private String parroquia;
 
     public Barrio() {
 
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getBarrio() {
+        return barrio;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setBarrio(String nombre) {
+        this.barrio = nombre;
     }
 
     public int getCodBarrio() {
@@ -32,5 +31,22 @@ public class Barrio {
 
     public void setCodBarrio(int codBarrio) {
         this.codBarrio = codBarrio;
+    }
+
+    public String getParroquia() {
+        return parroquia;
+    }
+
+    public void setParroquia(String parroquia) {
+        this.parroquia = parroquia;
+    }
+
+    @Override
+    public String toString() {
+        return "Barrio{" +
+                "codBarrio=" + codBarrio +
+                ", nombre='" + barrio + '\'' +
+                ", parroquia='" + parroquia + '\'' +
+                '}';
     }
 }
