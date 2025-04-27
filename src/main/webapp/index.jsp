@@ -63,6 +63,17 @@
         </button>
       </a>
     </div>
+
+    <div class="register-box">
+      <h3 class="subtitle">Registra un evento</h3>
+      <p class="register-description">Registra los eventos de tu barrio.</p>
+      <a href="crearEvento.jsp">
+        <button class="button">
+          <span class="button-content">Registrar Evento</span>
+        </button>
+      </a>
+    </div>
+
   </div>
 </main>
 </body>
