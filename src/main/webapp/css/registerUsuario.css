@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+    --white-color: hsl(0, 0%, 100%);
+    --black-color: hsl(0, 0%, 0%);
+    --body-font: "Poppins", sans-serif;
+    --h1-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .813rem;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body, input, button {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/*=============== REGISTRO ===============*/
+.registroU {
+    position: relative;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+}
+
+.icon-container {
+    width: 150px;
+    height: 90px;
+    margin-top: -4px;
+    margin-left: -35px;
+}
+
+.encabezado-registroU {
+    display: flex;
+    flex-direction: row;
+}
+
+.registroU-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.registroU-form {
+    position: relative;
+    margin-inline: 1.5rem;
+    background-color: hsla(0, 0%, 100%, .01);
+    border: 2px solid hsla(0, 0%, 100%, .7);
+    padding: 2.5rem 1rem;
+    color: var(--white-color);
+    border-radius: 1rem;
+    backdrop-filter: blur(16px);
+}
+
+.registroU-title {
+    margin-top: 10px;
+    margin-left: -35px;
+    text-align: center;
+    font-size: var(--h1-font-size);
+    margin-bottom: 1.25rem;
+}
+
+.registroU-inputs,
+.registroU-box {
+    display: grid;
+}
+
+.registroU-inputs {
+    row-gap: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.registroU-box {
+    grid-template-columns: 1fr max-content;
+    column-gap: .75rem;
+    align-items: center;
+    border: 2px solid hsla(0, 0%, 100%, .7);
+    padding-inline: 1.25rem;
+    border-radius: 4rem;
+}
+
+.registroU-input,
+.registroU-button {
+    border: none;
+    outline: none;
+}
+
+.registroU-input {
+    width: 100%;
+    background: none;
+    color: var(--white-color);
+    padding-block: 1rem;
+}
+
+.registroU-input::placeholder {
+    color: var(--white-color);
+}
+
+.registroU-box i {
+    font-size: 1.25rem;
+}
+
+.registroU-button {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--white-color);
+    border-radius: 4rem;
+    color: var(--black-color);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.registroU-inicio a {
+    display: block;
+    margin-top: 2rem;
+    color: var(--white-color);
+    font-weight: 400;
+    text-align: center;
+    text-decoration: underline;
+}
+
+/*=============== MEDIA QUERY ===============*/
+@media screen and (min-width: 576px) {
+    .registroU {
+        justify-content: center;
+    }
+
+    .registroU-form {
+        width: 420px;
+        padding-inline: 2.5rem;
+    }
+
+    .registroU-title {
+        margin-bottom: 2rem;
+    }
+}
