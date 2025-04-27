@@ -25,7 +25,7 @@
 </header>
 <hr>
 
-<main class="main-container">
+<div class="main-container">
   <!-- Parte izquierda -->
   <div class="left-section">
     <div class="info-box">
@@ -64,6 +64,10 @@
       </a>
     </div>
   </div>
-</main>
+
+   <main>
+
+  </main>
+</div>
 </body>
 </html>
