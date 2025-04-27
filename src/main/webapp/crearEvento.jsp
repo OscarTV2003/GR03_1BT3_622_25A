@@ -1,44 +1,56 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Crear Evento</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="" rel="stylesheet">
     <link href="css/registroEvento.css" rel="stylesheet">
+    <title>Crear Evento</title>
+
 </head>
 <body>
-<div class="form-container">
-    <h2>Registro de Evento</h2>
-    <form action="CrearEvento" method="post" accept-charset="UTF-8">
+<div class="registroEvento">
+    <img src="images/evento.jpg" alt="image" class="registro-img">
+
+    <form action="CrearEvento" method="post" class="registro-form" accept-charset="UTF-8">
         <input type="hidden" name="action" value="crearEvento">
 
-        <div class="form-group">
-            <label for="nombreEvento">Nombre del Evento:</label>
-            <input type="text" id="nombreEvento" name="nombreEvento" required>
+        <div class="titulo-evento">
+            <h1 class="registro-title">Registro Evento</h1>
         </div>
 
-        <div class="form-group">
-            <label for="fechaInicio">Fecha del Evento:</label>
-            <input type="text" id="fechaInicio" name="fechaInicio" required>
-        </div>
+        <div class="registro-inputs">
+            <div class="registro-box">
+                <input type="text" id="nombreEvento" name="nombreEvento" class="registro-input" placeholder="Nombre del Evento" required>
+            </div>
 
-        <div class="form-group">
-            <label for="descripcion">Descripción:</label>
-            <input type="text" id="descripcion" name="descripcion" required>
-        </div>
+            <div class="registro-box">
+                <input type="text" id="fechaInicio" name="fechaInicio" class="registro-input" placeholder="Fecha (dd/mm/aaaa)" required>
+            </div>
 
-        <div class="form-group">
-            <label for="hora">Hora del evento:</label>
-            <input type="text" id="hora" name="hora" required>
-        </div>
+            <div class="registro-box">
+                <input type="text" id="descripcion" name="descripcion" class="registro-input" placeholder="Descripción" required>
+            </div>
 
-        <div class="form-group">
-            <label for="imagen">Imagen:</label>
-            <input type="text" id="imagen" name="imagen" required>
+            <div class="registro-box">
+                <input type="text" id="hora" name="hora" class="registro-input" placeholder="Hora" required>
+            </div>
+
+            <div class="registro-box">
+                <input type="text" id="imagen" name="imagen" class="registro-input" placeholder="Imagen" required>
+            </div>
+
         </div>
 
         <button type="submit" class="submit-button">Registrar evento</button>
+
+        <div class="registro-inicio">
+            <a href="index.jsp">Volver al inicio</a>
+        </div>
+
     </form>
-    <a href="index.jsp" class="back-link">Volver al inicio</a>
+
 </div>
 </body>
 </html>

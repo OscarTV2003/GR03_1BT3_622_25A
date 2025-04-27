@@ -1,43 +1,153 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+    --white-color: hsl(0, 0%, 100%);
+    --black-color: hsl(0, 0%, 0%);
+    --body-font: "Poppins", sans-serif;
+    --h1-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .813rem;
 }
-.form-container {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
-.form-group {
-    margin-bottom: 15px;
+
+body, input, button {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
 }
-label {
+
+a {
+    text-decoration: none;
+}
+
+img {
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    max-width: 100%;
+    height: auto;
 }
-input[type="text"] {
+
+/*=============== REGISTRO ===============*/
+.registro {
+    position: relative;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+}
+
+.icon-container {
+    width: 150px;
+    height: 90px;
+    margin-top: -4px;
+    margin-left: -45px;
+}
+
+.encabezado-registro {
+    display: flex;
+    flex-direction: row;
+}
+
+.registro-img {
+    position: absolute;
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
-.submit-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
+
+.registro-form {
+    position: relative;
+    margin-inline: 1.5rem;
+    background-color: hsla(0, 0%, 100%, .01);
+    border: 2px solid hsla(0, 0%, 100%, .7);
+    padding: 2.5rem 1rem;
+    color: var(--white-color);
+    border-radius: 1rem;
+    backdrop-filter: blur(16px);
+}
+
+.registro-title {
+    margin-top: 20px;
+    margin-left: -20px;
+    text-align: center;
+    font-size: var(--h1-font-size);
+    margin-bottom: 1.25rem;
+}
+
+.registro-inputs,
+.registro-box {
+    display: grid;
+}
+
+.registro-inputs {
+    row-gap: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.registro-box {
+    grid-template-columns: 1fr max-content;
+    column-gap: .75rem;
+    align-items: center;
+    border: 2px solid hsla(0, 0%, 100%, .7);
+    padding-inline: 1.25rem;
+    border-radius: 4rem;
+}
+
+.registro-input,
+.registro-button {
     border: none;
-    border-radius: 4px;
+    outline: none;
+}
+
+.registro-input {
+    width: 100%;
+    background: none;
+    color: var(--white-color);
+    padding-block: 1rem;
+}
+
+.registro-input::placeholder {
+    color: var(--white-color);
+}
+
+.registro-box i {
+    font-size: 1.25rem;
+}
+
+.registro-button {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--white-color);
+    border-radius: 4rem;
+    color: var(--black-color);
+    font-weight: 500;
     cursor: pointer;
 }
-.submit-button:hover {
-    background-color: #45a049;
+
+.registro-inicio a {
+    display: block;
+    margin-top: 2rem;
+    color: var(--white-color);
+    font-weight: 400;
+    text-align: center;
+    text-decoration: underline;
 }
-.back-link {
-    display: inline-block;
-    margin-top: 10px;
-    color: #333;
-    text-decoration: none;
+
+@media screen and (min-width: 576px) {
+    .registro {
+        justify-content: center;
+    }
+
+    .registro-form {
+        width: 420px;
+        padding-inline: 2.5rem;
+    }
+
+    .registro-title {
+        margin-bottom: 2rem;
+    }
 }
