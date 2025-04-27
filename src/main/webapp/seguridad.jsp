@@ -3,7 +3,7 @@
 
 <c:set var="securityContent">
   <div class="seguridad-container">
-    <h2><i class="ri-police-car-line"></i> Seguridad Comunitaria</h2>
+    <h2>Seguridad Comunitaria</h2>
   </div>
 </c:set>
 
