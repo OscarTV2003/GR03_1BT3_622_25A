@@ -6,6 +6,7 @@
                             https://hibernate.org/xsd/orm/cfg/hibernate-configuration-7.0.xsd">
 
     <session-factory>
+        <!-- Configuración de la base de datos -->
         <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
         <property name="hibernate.connection.url">
             jdbc:sqlserver://DESKTOP-QMS69UL:1433;databaseName=AppWeb;encrypt=true;trustServerCertificate=true
@@ -14,7 +15,19 @@
         <property name="hibernate.connection.username">sa</property>
         <property name="hibernate.connection.password">P@ssw0rd</property>
 
+        <!-- <property name="hibernate.connection.url">
+            jdbc:sqlserver://WINDOWSSERVER20:1433;database=AppWeb;encrypt=true;trustServerCertificate=true
+        </property>
+        <property name="hibernate.connection.username">emergencia</property>
+        <property name="hibernate.connection.password">P@ssw@rd</property> -->
+
+        <!-- Dialecto para SQL Server -->
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+
+        <!-- Crear o actualizar las tablas automáticamente -->
         <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Mostrar consultas SQL en consola -->
         <property name="hibernate.show_sql">true</property>
 
     </session-factory>

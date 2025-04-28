@@ -19,7 +19,11 @@ public class RegistroMiembroBarrialServlet extends HttpServlet {
         miembroBarrial.setContrasena(contrasena);
         miembroBarrial.setCodBarrio(codBarrio);
 
-        Hibernate.guardarEnBaseDeDatos(miembroBarrial);
+        try {
+            Hibernate.guardarEnBaseDeDatos(miembroBarrial);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
         response.sendRedirect("index.jsp");
 
