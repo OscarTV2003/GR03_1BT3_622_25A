@@ -1,0 +1,174 @@
+/* Contenedor principal */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+
+/* Sección izquierda: Categorías */
+.left-section {
+    width: 25%;
+    min-width: 200px; /* Define un mínimo ancho para que no se achique demasiado en pantallas pequeñas */
+    margin-right: 20px;
+}
+
+.category-box {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.category-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.category-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.category-list li {
+    margin: 8px 0;
+}
+
+.category-list a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* Sección derecha: Publicaciones */
+.right-section {
+    width: 70%;
+    min-width: 300px; /* Define un mínimo ancho para esta sección */
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-input {
+    padding: 8px;
+    font-size: 14px;
+}
+
+.search-button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.action-buttons a {
+    margin-left: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.emprendimientos-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.emprendimiento-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.view-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.name-app {
+    display: flex;
+    align-items: center; /* Alinea verticalmente la imagen y el título */
+}
+
+.emprendimiento-img {
+    width: 50px; /* Tamaño de la imagen, ajusta como necesites */
+    height: auto;
+    margin-right: 10px; /* Espacio entre la imagen y el título */
+}
+
+.css-h1 h1 {
+    margin: 0; /* Elimina el margen del título para que se vea alineado */
+}
+
+/* Media queries para pantallas pequeñas */
+@media screen and (max-width: 1024px) {
+    .main-container {
+        flex-direction: column; /* En pantallas más pequeñas, apila las secciones */
+        padding: 10px;
+    }
+
+    .left-section {
+        width: 100%; /* La sección izquierda ocupa el 100% del ancho */
+        margin-right: 0;
+        margin-bottom: 20px; /* Añade un margen inferior */
+    }
+
+    .right-section {
+        width: 100%; /* La sección derecha también ocupa el 100% del ancho */
+    }
+
+    .top-bar {
+        flex-direction: column; /* Los elementos en la barra superior se apilan verticalmente */
+        align-items: flex-start; /* Alinea a la izquierda los elementos */
+    }
+
+    .search-bar {
+        width: 100%; /* Hace que la barra de búsqueda ocupe todo el ancho */
+        margin-top: 10px;
+    }
+
+    .button {
+        width: 100%; /* Los botones ocupan todo el ancho en pantallas pequeñas */
+        margin-top: 10px;
+    }
+
+    .category-box {
+        width: 100%; /* Las categorías también ocupan todo el ancho */
+        margin-bottom: 20px; /* Espacio entre categorías */
+    }
+}
+
+/* Media queries para pantallas muy pequeñas (móviles) */
+@media screen and (max-width: 480px) {
+    .emprendimiento-img {
+        width: 40px; /* La imagen es más pequeña en pantallas móviles */
+    }
+
+    .css-h1 h1 {
+        font-size: 1.5em; /* Reduce el tamaño del título en pantallas móviles */
+    }
+
+    .button {
+        padding: 8px 16px; /* Ajusta el tamaño del botón en pantallas más pequeñas */
+    }
+
+    .search-input {
+        font-size: 12px; /* Hace que el texto de la barra de búsqueda sea más pequeño */
+    }
+
+    .search-button {
+        padding: 8px 12px; /* Ajusta el tamaño del botón de búsqueda */
+    }
+}

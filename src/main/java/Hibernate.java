@@ -7,22 +7,30 @@ import java.io.Serializable;
 import java.util.List;
 
 public class Hibernate {
-    public static <T> void guardarEnBaseDeDatos(T entidad) {
+    public static <T> void guardarEnBaseDeDatos(T entidad) throws Exception {
         Configuration configuration = new Configuration();
         configuration.addAnnotatedClass(entidad.getClass());
         configuration.configure("hibernate.cfg.xml");
 
         SessionFactory sessionFactory = configuration.buildSessionFactory();
         Session session = sessionFactory.openSession();
+        Transaction transaction = null;
 
-        Transaction transaction = session.beginTransaction();
-        // Se guarda en la BD
-        session.persist(entidad);
 
-        transaction.commit();
-
-        session.close();
-        sessionFactory.close();
+        try {
+            transaction = session.beginTransaction();
+            // Se guarda en la BD
+            session.persist(entidad);
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            throw new Exception("Error al guardar el emprendimiento", e);
+        } finally {
+            session.close();
+            sessionFactory.close();
+        }
     }
 
     //Traer todos los registros de una clase
