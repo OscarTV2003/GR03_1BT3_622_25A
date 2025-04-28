@@ -51,9 +51,7 @@
             <a href="index.jsp">Volver Inicio</a>
         </div>
 
-        <div class="login-inicio">
-            <a href="base.jsp">Pagina</a>
-        </div>
+
     </form>
 </div>
 </body>
