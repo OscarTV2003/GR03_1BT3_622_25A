@@ -21,7 +21,11 @@ public class CrearEvento extends HttpServlet {
         evento.setHora(hora);
         evento.setImagen(imagen);
 
-        Hibernate.guardarEnBaseDeDatos(evento);
+        try {
+            Hibernate.guardarEnBaseDeDatos(evento);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
         response.sendRedirect("index.jsp");
 

@@ -16,7 +16,11 @@ public class RegistroBarrioServlet extends HttpServlet {
         barrio.setParroquia(parroquia);
         barrio.setCodBarrio(codBarrio);
 
-        Hibernate.guardarEnBaseDeDatos(barrio);
+        try {
+            Hibernate.guardarEnBaseDeDatos(barrio);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
         response.sendRedirect("index.jsp");
     }
