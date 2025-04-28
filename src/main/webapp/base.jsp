@@ -44,9 +44,15 @@
                     </a>
                 </li>
                 <li>
-                    <a href="eventos.jsp">
+                    <a href="mostrarEventos.jsp">
                         <img src="https://img.icons8.com/?size=100&id=43978&format=png&color=000000" class="menu-icon" alt="Eventos">
                         <span>Eventos del Barrio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="crearEvento.jsp">
+                        <img src="https://img.icons8.com/?size=100&id=43978&format=png&color=000000" class="menu-icon" alt="Eventos">
+                        <span>Registro de un evento</span>
                     </a>
                 </li>
                 <li>

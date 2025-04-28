@@ -17,7 +17,7 @@ public class MostrarEventosServlet extends HttpServlet {
             // Verificar si la lista de eventos no es null o vacía
             if (eventos == null || eventos.isEmpty()) {
                 System.out.println("No se encontraron eventos en la base de datos.");
-                eventos = new ArrayList<>(); // <<<<<< AQUI EL CAMBIO: no dejes null, pon lista vacía
+                eventos = new ArrayList<>();
             } else {
                 System.out.println("Se encontraron " + eventos.size() + " eventos.");
             }

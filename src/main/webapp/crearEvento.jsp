@@ -17,12 +17,12 @@
         <input type="hidden" name="action" value="crearEvento">
 
         <div class="titulo-evento">
-            <h1 class="registro-title">Registro eventos.Evento</h1>
+            <h1 class="registro-title">Registro eventos</h1>
         </div>
 
         <div class="registro-inputs">
             <div class="registro-box">
-                <input type="text" id="nombreEvento" name="nombreEvento" class="registro-input" placeholder="Nombre del eventos.Evento" required>
+                <input type="text" id="nombreEvento" name="nombreEvento" class="registro-input" placeholder="Nombre del eventos" required>
             </div>
 
             <div class="registro-box">
@@ -46,7 +46,7 @@
         <button type="submit" class="submit-button">Registrar evento</button>
 
         <div class="registro-inicio">
-            <a href="index.jsp">Volver al inicio</a>
+            <a href="base.jsp">Volver al inicio</a>
         </div>
 
     </form>
