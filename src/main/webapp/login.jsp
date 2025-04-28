@@ -15,17 +15,16 @@
 <div class="login">
     <img src="images/login.jpg" alt="image" class="login-img" >
 
-    <form action="" class="login-form">
+    <form action="base.jsp" class="login-form">
         <div class="encabezado-login">
             <img class="icon-container" src="images/iconBarrio.png">
             <h1 class="login-title">Inicio Sesión</h1>
         </div>
         <div class="login-inputs">
             <div class="login-box">
-                <input type="email" class="login-input" placeholder="Cédula" required>
+                <input type="text" class="login-input" placeholder="Cédula">
                 <i class="ri-mail-fill"></i>
             </div>
-
             <div class="login-box">
                 <input type="password" placeholder="Contraseña" required class="login-input">
                 <i class="ri-lock-2-fill"></i>

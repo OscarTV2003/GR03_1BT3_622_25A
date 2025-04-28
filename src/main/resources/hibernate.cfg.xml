@@ -10,6 +10,7 @@
         <property name="hibernate.connection.url">
             jdbc:sqlserver://DESKTOP-QMS69UL:1433;databaseName=AppWeb;encrypt=true;trustServerCertificate=true
         </property>
+        
         <property name="hibernate.connection.username">sa</property>
         <property name="hibernate.connection.password">P@ssw0rd</property>
 
