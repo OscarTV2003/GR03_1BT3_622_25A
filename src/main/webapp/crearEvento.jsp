@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="" rel="stylesheet">
     <link href="css/registroEvento.css" rel="stylesheet">
-    <title>Crear Evento</title>
+    <title>Crear eventos.Evento</title>
 
 </head>
 <body>
@@ -17,12 +17,12 @@
         <input type="hidden" name="action" value="crearEvento">
 
         <div class="titulo-evento">
-            <h1 class="registro-title">Registro Evento</h1>
+            <h1 class="registro-title">Registro eventos.Evento</h1>
         </div>
 
         <div class="registro-inputs">
             <div class="registro-box">
-                <input type="text" id="nombreEvento" name="nombreEvento" class="registro-input" placeholder="Nombre del Evento" required>
+                <input type="text" id="nombreEvento" name="nombreEvento" class="registro-input" placeholder="Nombre del eventos.Evento" required>
             </div>
 
             <div class="registro-box">

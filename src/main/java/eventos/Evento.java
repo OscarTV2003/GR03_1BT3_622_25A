@@ -1,3 +1,5 @@
+package eventos;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -46,7 +48,7 @@ public class Evento {
 
     @Override
     public String toString() {
-        return "Evento{" +
+        return "eventos.Evento{" +
                 "nombreEvento=" + nombreEvento +
                 ", fechaInicio='" + fechaInicio + '\'' +
                 ", descripcion='" + descripcion + '\'' +

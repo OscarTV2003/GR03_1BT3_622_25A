@@ -7,15 +7,24 @@
 
     <session-factory>
         <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <!--
         <property name="hibernate.connection.url">
             jdbc:sqlserver://DESKTOP-QMS69UL:1433;databaseName=AppWeb;encrypt=true;trustServerCertificate=true
         </property>
+        -->
+        <!-- BD HenryL -->
+
+        <property name="hibernate.connection.url">
+            jdbc:sqlserver://HENRYL-PC:1433;database=AppBarrial;encrypt=true;trustServerCertificate=true
+        </property>
+
         <property name="hibernate.connection.username">sa</property>
         <property name="hibernate.connection.password">P@ssw0rd</property>
 
         <property name="hibernate.hbm2ddl.auto">update</property>
         <property name="hibernate.show_sql">true</property>
 
+        <mapping class="eventos.Evento"/>
     </session-factory>
 </hibernate-configuration>
 
