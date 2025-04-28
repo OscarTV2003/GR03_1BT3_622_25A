@@ -5,6 +5,6 @@
          version="5.0">
 
         <welcome-file-list>
-            <welcome-file>emprendimientos.jsp</welcome-file> <!-- Cambia esto a tu archivo de inicio -->
+            <welcome-file>index.jsp</welcome-file> <!-- Cambia esto a tu archivo de inicio -->
         </welcome-file-list>
 </web-app>
